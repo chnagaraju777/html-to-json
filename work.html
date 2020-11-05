@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text</title>
+	<script>
+		function myfunction(){
+            alert("welcome");
+            var a = document.getElementById("data").value;
+            var myjson = JSON.stringify(a);
+            document.getElementById("demo").innerHTML = myjson;
+            
+            alert(a);
+        }
+        
+        function myfunction1(){
+		alert("hai");
+    var txt = '{"ename":"John", "age":30, "city":"New York"}'
+
+    var obj = JSON.parse(txt);
+
+    document.getElementById("demo1").innerHTML = obj.ename + ", " + obj.age + ", " +obj.city;
+}
+	</script>
+</head>
+<body>
+
+<textarea id="data" name="w3review" rows="4" cols="50" placeholder="enter your data">
+</textarea><br>
+  <input type="submit"  onclick="myfunction()" value="Submit">
+<h3 id="demo">output:</h3>
+
+
+
+<h2>json to html conversion</h2>
+'{"ename":"John", "age":30, "city":"New York"}'<br>
+
+<textarea id="data1" name="w3review" rows="4" cols="50" placeholder="enter your data">
+</textarea><br>
+
+<input type="submit"  onclick="myfunction1()" value="Submit"><br>
+<p id="demo1">output:</p>
+
+<h2>html Tree</h2>
+<ul>
+    <li>Employees:
+        <ul>
+            <li>ename:Jhon</li>
+            <li>age:30</li>
+            <li>city: New York"</li>
+           
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
